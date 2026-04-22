@@ -30,7 +30,8 @@ app.use(helmet());
 
 // CORS Configuration
 const corsOptions = {
-  origin: process.env.CORS_ORIGIN?.split(',') || 'http://localhost:3000',
+  // origin: process.env.CORS_ORIGIN?.split(',') || 'http://localhost:3000',
+  origin: process.env.CORS_ORIGIN || '*',
   credentials: true,
   optionsSuccessStatus: 200,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
